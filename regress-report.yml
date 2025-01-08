@@ -38,45 +38,45 @@ test-cases:
 
   
 bugreports:
-  - summary: |
+- summary: |
     Не корректно работает смена языка
-  environment: |
+environment: |
     Yandex Browser 24.12.2.856 (64-bit)
     ОС Windows 10
-  steps-to-reproduce: |
+steps-to-reproduce: |
     1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
     2. Нажать кнопку "Language" 
     3. Выбрать "Русский"
-  expected-result: |
+expected-result: |
     Текст на сайте должен показываться на русском языке
-  actual-result: |
+actual-result: |
     Не весь текст переводится на русский язык
     Не полный перевод изображен на скриншоте translatebug2.png
 
-  - summary: |
+- summary: |
     Не корректно отображаются картинки
-  environment: |
+environment: |
     Yandex Browser 24.12.2.856 (64-bit)
     ОС Windows 10
-  steps-to-reproduce: |
+steps-to-reproduce: |
     1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
     2. Выбрать несколько товаров
-  expected-result: |
+expected-result: |
     Пользователю должны выдаваться товары и корректное отображение картинки к товару
-  actual-result: |
+actual-result: |
     Картинки не корректно отображаются
     Пример на скриншоте croppedimaigesv2.png
 
-  - summary: |
+- summary: |
     Нету названия категории
-  environment: |
+environment: |
     Yandex Browser 24.12.2.856 (64-bit)
     ОС Windows 10
-  steps-to-reproduce: |
+steps-to-reproduce: |
     1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
     2. Открыть список категории
-  expected-result: |
+expected-result: |
     Пользователю должен выдаваться список категории
-  actual-result: |
+actual-result: |
     Среди списка категории есть безымянная категория
     Пример на скриншоте unkowncategoryv2.png
