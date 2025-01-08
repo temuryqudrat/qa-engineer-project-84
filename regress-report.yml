@@ -38,7 +38,7 @@ test-cases:
 
   
 bugreports:
- - summary: |
+  - summary: |
     Не корректно работает смена языка
   environment: |
     Yandex Browser 24.12.2.856 (64-bit)
