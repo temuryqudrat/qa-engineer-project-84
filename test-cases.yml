@@ -8,7 +8,7 @@
   test-data: |
     Производитель = Annibale Colombo
   steps:
-    - Нажимаеми на Gucci в списке производителей
+    - Нажимаеми на Annibale Colombo в списке производителей
   expected-result: |
     Получаем список товаров от Annibale Colombo
 
