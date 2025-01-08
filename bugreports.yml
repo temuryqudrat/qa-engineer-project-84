@@ -1,0 +1,45 @@
+---
+- summary: |
+    Не корректно работает смена языка
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
+    2. Нажать кнопку "Language" 
+    3. Выбрать "Русский"
+  expected-result: |
+    Текст на сайте должен показываться на русском языке
+  actual-result: |
+    Не весь текст переводится на русский язык
+    Не полный перевод изображен на скриншоте translatebug.png
+
+- summary: |
+    Отсутствует картинка при выборе английской версии сайта
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
+    2. Нажать кнопку "Language" 
+  expected-result: |
+    Должен появится список версий сайта на английском и русском языке с соответствующими флагами
+  actual-result: |
+    есть только флаг России
+    отсутсвие картинки у английского языка можно увидеть в самом HTML файле
+    Пример показан на скриншоте imagebug.png
+
+  - summary: |
+    Отсутствует название категории продуктов
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
+    2. Выбрать в списке категории самую последнюю категорию, которая пустая
+    3. Появляется список продуктов
+  expected-result: |
+    У категории продуктов должно быть соответствующее название
+  actual-result: |
+    Название категории пустое
+    Наглядный пример показан на скриншоте nolabelcategory.png
