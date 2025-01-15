@@ -88,3 +88,18 @@
     Выбранная категория убирается из фильтра и предоставляются товары со всех категории
   actual-result: |
     Нет возможности убрать выбранную категорию
+
+- summary: |
+    Ошибка загрузки таблицы стилей(stylesheet) random.css и author.js
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
+    2. Открыть Devtools
+    3. Выбрать вкладку Network
+  expected-result: |
+    Все использованные стили должны быть доступны
+  actual-result: |
+    Ошибка при загрузке таблицы стилей
+    Пример показан на скриншоте bugscreenshots/stylesheeturls.png
