@@ -32,27 +32,8 @@ test-cases:
     Проверка поиска товара по неверному ключевому слову
   status: pass
 
-- summary: |
-    Проверка адаптивности сайта
-  status: fail
-
   
 bugreports:
-- summary: |
-    Не корректно работает смена языка
-  environment: |
-    Yandex Browser 24.12.2.856 (64-bit)
-    ОС Windows 10
-  steps-to-reproduce: |
-    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
-    2. Нажать кнопку "Language" 
-    3. Выбрать "Русский"
-  expected-result: |
-    Текст на сайте должен показываться на русском языке
-  actual-result: |
-    Не весь текст переводится на русский язык
-    Не полный перевод изображен на скриншоте translatebug2.png
-
 - summary: |
     Не корректно отображаются картинки
   environment: |
@@ -65,7 +46,7 @@ bugreports:
     Пользователю должны выдаваться товары и корректное отображение картинки к товару
   actual-result: |
     Картинки не корректно отображаются
-    Пример на скриншоте croppedimaigesv2.png
+    Пример на скриншоте bugscreenshots/croppedimaigesv2.png
 
 - summary: |
     Нету названия категории
@@ -79,4 +60,31 @@ bugreports:
     Пользователю должен выдаваться список категории
   actual-result: |
     Среди списка категории есть безымянная категория
-    Пример на скриншоте unkowncategoryv2.png
+    Пример на скриншоте bugscreenshots/unkowncategoryv2.png
+
+- summary: |
+    Неправильная работа фильтра по брэндам
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Выбрать любую категорию
+    2. Выбрать безымянный чекбокс
+  expected-result: |
+    Пользователю выдается список товаров согласно созданному фильтру
+  actual-result: |
+    При выборе безымянного брэнда пользователю выдается неотфильтрованный список товаров
+    Пример показан на скриншоте bugscreenshots/
+    
+- summary: |
+    Отсутствие кликабельности всей иконки
+  environment: |
+    Yandex Browser 24.12.2.856 (64-bit)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу сайта https://hexlet-products-store.vercel.app/
+    2. Кликнуть по товару
+  expected-result: |
+    Пользователю открывается страница товара и её подробности
+  actual-result: |
+    Текст не кликабелен, для перехода на страницу товара с его описанием нужно кликнуть по картинке
