@@ -118,4 +118,4 @@
     Заказ оформлен
   actual-result: |
     Выводится сообщения, что заказ оформлен, но если открыть Devtools, то видим что воспроизвелась ошибка "500 (Internal Server Error)" при оформлении заказа
-    Пример показан на скриншоте bugscreenshots/ordererror.png
+    Пример показан на скриншоте bugscreenshots/ordererror.png и ответ от сервера bugscreenshots/responsefromserver.png
